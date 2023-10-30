@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        function validation() {
+            var name = document.forms.regform.name.value;
+            var Address = document.forms.regform.Address.value;
+            var email = document.forms.regform.email.value;
+            var mobile = document.forms.regform.mobile.value;
+            var password = document.forms.regform.password.value;
+            var subject = document.forms.regform.subject.value;
+        }
+        if (name == " " || name == null) {
+            alert("must enter name");
+            return false;
+        }
+        if (Address == " " || Address == null) {
+            alert("must enter Address");
+            return false;
+        }
+        if (email == " " || email == null) {
+            alert("must enter email");
+            return false;
+        }
+        if (mobile == " " || mobile == null) {
+            alert("must enter mobile");
+            return false;
+        }
+        if (password == " " || password == null) {
+            alert("must enter password");
+            return false;
+        }
+        if (subject == " " || subject == null) {
+            alert("must enter subject");
+            return false;
+        }
+
+    </script>
+    <title>validation form </title>
+</head>
+
+<body>
+    <fieldset style="height: 400px;width: 250px;background-color: gray;">
+        <h1> Registration Form</h1>
+        <form name="regform" onsubmit="return validation()" method="post">
+            Name:<input type="text" name="name" placeholder="Name" /><br /><br />
+            Address:<input type="text" name="Address" placeholder="Address" /><br /><br />
+            Email:<input type=" text" name="email" placeholder="email" /><br /><br />
+            Moblie:<input type="text" name="mobile" placeholder="mobile number" /><br /><br />
+            Password:<input type="text" name="password" placeholder="password" /><br /><br />
+            Select Your Course:<select value=" " name="subject"><br /><br />
+                <option>B.Tech</option>
+                <option>BBA</option>
+                <option>BCA</option>
+            </select><br /><br />
+            <center> <input type="submit" value="send" name="submit" /></center>
+        </form>
+    </fieldset>
+</body>
+
+</html>
